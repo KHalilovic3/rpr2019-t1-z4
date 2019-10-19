@@ -4,7 +4,7 @@ public class Artikl {
     private String kod;
     private int cijena;
     private String naziv;
-    public Artikl(int cijena, String naziv, String kod) {
+    public Artikl(String naziv,int cijena,  String kod) {
         this.cijena = cijena;
         this.naziv = naziv;
         this.kod = kod;
