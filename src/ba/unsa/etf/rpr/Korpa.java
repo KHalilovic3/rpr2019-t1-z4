@@ -7,12 +7,13 @@ public class Korpa {
     private Artikl[] niz = new Artikl[MAX_VALUE];
     private int broj = 0;
 
-    public boolean dodajArtikl(Artikl a){
+
+    public boolean dodajArtikl(Artikl a) {
         if(broj == MAX_VALUE){
             return false;
         }else{
             niz[broj] = a;
-            broj++;
+            broj = broj + 1;
             return true;
         }
     }
@@ -21,7 +22,6 @@ public class Korpa {
     }
     public Artikl izbaciArtiklSaKodom(String a){
         for(int i = 0;i<broj;i++){
-
             if(niz[i].getKod().equals(a)){
                 Artikl[] b = Arrays.copyOf(niz,niz.length);
                 System.arraycopy(niz,i+1,niz,i,broj - 1 - i);
@@ -37,6 +37,9 @@ public class Korpa {
             sum = sum + niz[i].getCijena();
         }
         return sum;
+    }
+    public int getBroj() {
+        return broj;
     }
 
 }
